@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background for the app */
+    color: #ffffff; /* White text color */
+    margin: 0;
+    padding: 20px; /* Padding around the body */
+}
+
+.container {
+    max-width: 800px; /* Maximum width of the container */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+    background-color: #1e1e1e; /* Background color for the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+header {
+    text-align: center; /* Center the header text */
+}
+
+h1 {
+    font-size: 3em; /* Header font size */
+    margin: 0; /* No margin */
+    padding: 20px; /* Padding around the header */
+    background: linear-gradient(90deg, #1db954, #1aa34a); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Fill the text with transparent color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+    animation: pulse 1.5s infinite; /* Pulsing animation */
+}
+
+.add-song, .search-song {
+    margin-bottom: 20px; /* Margin between sections */
+}
+
+input[type="text"], input[type="file"] {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px; /* Padding inside inputs */
+    margin: 5px 0; /* Margin for spacing */
+    border-radius: 5px; /* Rounded corners for inputs */
+    border: 1px solid #ccc; /* Border color */
+}
+
+button {
+    background-color: #1db954; /* Green button color */
+    color: white; /* Button text color */
+    padding: 10px; /* Padding inside button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+button:hover {
+    background-color: #1aa34a; /* Darker green on hover */
+}
+
+.song-list {
+    margin-top: 20px; /* Margin for top spacing */
+}
+
+.song-item {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between song info and delete button */
+    padding: 10px; /* Padding inside song item */
+    border-bottom: 1px solid #333; /* Bottom border for separation */
+}
+
+.song-info {
+    flex: 1; /* Allow song info to take available space */
+    margin-right: 10px; /* Space between song info and audio player */
+}
+
+.audio-player {
+    flex: 2; /* Allow more space for the audio player */
+    text-align: center; /* Center the audio player */
+}
+
+audio {
+    width: 100%; /* Full width of the audio player */
+}
+
+.delete-button {
+    background-color: #ff4757; /* Red delete button */
+    padding: 5px 10px; /* Padding inside delete button */
+}
+
+.delete-button:hover {
+    background-color: #e84118; /* Darker red on hover */
+}
+
+.back-button {
+    display: inline-block; /* Inline block for the back button */
+    margin-top: 10px; /* Margin for spacing */
+    padding: 10px; /* Padding inside back button */
+    background-color: #333; /* Background color for back button */
+    color: white; /* Text color for back button */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.back-button:hover {
+    background-color: #444; /* Darker background on hover */
+}
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input {
+    background-color: #282828; /* Darker input fields */
+    color: white;
+}
+
+button {
+    background-color: #1db954; /* Spotify green */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1aa34a; /* Darker green on hover */
+}
+
+.song-list {
+    background-color: #282828; /* Dark background for song list */
+    padding: 15px;
+    border-radius: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+audio {
+    margin-left: 20px;
+    outline: none; /* Remove outline from audio player */
+}

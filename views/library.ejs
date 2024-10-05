@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Library</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SPOTINODE</h1>
+        </header>
+
+        <!-- Add Song Form -->
+        <div class="add-song">
+            <h2>Add a New Song</h2>
+            <form action="/music/add" method="POST" enctype="multipart/form-data">
+                <input type="text" name="title" placeholder="Song Title" required>
+                <input type="text" name="artist" placeholder="Artist Name" required>
+                <input type="file" name="file" accept="audio/*" required>
+                <button type="submit">Add Song</button>
+            </form>
+        </div>
+
+        <!-- Search Functionality -->
+        <div class="search-song">
+            <h2>Search Songs</h2>
+            <form action="/music/search" method="GET">
+                <input type="text" name="query" placeholder="Search for a song..." required>
+                <button type="submit">Search</button>
+            </form>
+            <!-- Back to Playlist Button -->
+            <a href="/music" class="back-button">Back to Playlist</a>
+        </div>
+
+        <!-- Display Songs -->
+        <h2>Your Songs</h2>
+        <div class="song-list">
+            <ul>
+                <% songs.forEach(song => { %>
+                    <li class="song-item">
+                        <div class="song-info">
+                            <strong><%= song.title %></strong> by <%= song.artist %>
+                        </div>
+                        <div class="audio-player">
+                            <audio controls>
+                                <source src="<%= song.file_path %>" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <form action="/music/delete/<%= song.id %>" method="POST" class="delete-form">
+                            <button type="submit" class="delete-button">Delete</button>
+                        </form>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
